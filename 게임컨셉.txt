@@ -144,3 +144,5 @@ ex)
 그러나 시간 초과 시 강제 실패 가능
 
 한 번 보시고 추가할 점이나 보완할 점 알려주세요.
+
+https://docs.google.com/presentation/d/12KjORZGrY8ovrYNWspuoV8LaQjfB1uFlm73Bk8m1To0/edit?usp=sharing
