@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: +
   sprite: {fileID: -1566108241, guid: 90ea7a5a95741a3418ce28295d107709, type: 3}
-  weight: 1
+  weight: 7
   upD: 1
   upA: 1
   downD: 1
