@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2917abda891281e47a5aea752851e576, type: 3}
+  m_Name: VoidRoomData 1
+  m_EditorClassIdentifier: 
+  voidRoomPrefab: {fileID: 2416119883146385809, guid: fd56200278098a140a884a93dd5b6400, type: 3}
+  weight: 1
+  roomStartPosition: {x: 0, y: 0, z: 0}
+  roomScale: {x: 2, y: 2, z: 2}
+  isRandomLocation: 0
+  isRotatable: 0
+  rNum: 0
+  doorPositions:
+  - position: {x: 0, y: 0, z: 0}
+    direction: 0
+    connection: 1
