@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileName: Air
   sprite: {fileID: -1534862800, guid: 88d2ebe7dd88efc489ead01d8ba1e313, type: 3}
-  weight: 20
+  weight: 15
   upD: 0
   upA: 0
   downD: 0
