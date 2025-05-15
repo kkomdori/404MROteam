@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float sneakSpeed; 
     public float jumpPower; 
     public bool isJumping;  // false
+    private Scrollbar scrollbar;
+        
 
     float gravity = -20f;
     float yVelocity = 0;
@@ -20,6 +23,7 @@ public class PlayerController : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
         speed = walkSpeed;
+        scrollbar = FindObjectOfType<Scrollbar>();
     }
 
     private void Update()
@@ -27,9 +31,11 @@ public class PlayerController : MonoBehaviour
         float xx = Input.GetAxisRaw("Horizontal");
         float zz = Input.GetAxisRaw("Vertical");
 
-        Vector3 dir = new Vector3(xx, 0, zz);
-        dir = dir.normalized;
+        Vector3 dir = new Vector3(xx, 0, zz).normalized;
         dir = Camera.main.transform.TransformDirection(dir);
+        dir.y = 0; // y축은 아래에서 따로 처리
+
+        Vector3 move = dir * speed;
 
         if (isJumping && cc.collisionFlags == CollisionFlags.Below)
         {
@@ -41,19 +47,16 @@ public class PlayerController : MonoBehaviour
         {
             yVelocity = jumpPower;
             isJumping = true;
-
         }
 
         yVelocity += gravity * Time.deltaTime;
-        dir.y = yVelocity;
+        move.y = yVelocity;
 
-        cc.Move(dir * speed * Time.deltaTime);
+        cc.Move(move * Time.deltaTime);  // y축 포함된 전체 이동
 
         KeyboardInput();
-
-      
-
     }
+
 
     void KeyboardInput()
     {
@@ -66,16 +69,28 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
                 {
                     speed = sneakSpeed; // 조용히 걷기
+                    scrollbar.size += 0.003f;
                 }
 
                 else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
                 {
-                    speed = runSpeed; // 달리기
+                    if (scrollbar != null && scrollbar.size == 0f)
+                    {
+                        speed = walkSpeed; // 강제로 걷기
+                        
+                    }
+                    else
+                    {
+                        speed = runSpeed; // 정상 달리기
+                        scrollbar.size -= 0.003f;
+                    }
                 }
                 else
                 {
-                    speed = walkSpeed; // 기본 걷기
+                    speed = walkSpeed;
+                    scrollbar.size += 0.003f;
                 }
+                
                    
             }
             else
