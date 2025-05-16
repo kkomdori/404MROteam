@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (cc == null || !cc.enabled)
+            return;
         float xx = Input.GetAxisRaw("Horizontal");
         float zz = Input.GetAxisRaw("Vertical");
 
@@ -51,8 +53,11 @@ public class PlayerController : MonoBehaviour
 
         yVelocity += gravity * Time.deltaTime;
         move.y = yVelocity;
-
-        cc.Move(move * Time.deltaTime);  // y축 포함된 전체 이동
+        if (cc.enabled)
+        {
+            // y축 포함된 전체 이동
+            cc.Move(move * Time.deltaTime);
+        }
 
         KeyboardInput();
     }
