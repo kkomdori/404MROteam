@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class UIManager : MonoBehaviour
             CloseAllStageUI();
             EventSystem.current.SetSelectedGameObject(null); // 선택된 UI 해제
         }
+    }
+
+    public void GoToTitle()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     public void OpenUis(bool openUi)
