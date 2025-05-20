@@ -368,9 +368,9 @@ RectTransform:
   m_Children:
   - {fileID: 1033500754}
   - {fileID: 407437041}
-  - {fileID: 1942864638}
-  - {fileID: 1778920810}
   - {fileID: 1760619104}
+  - {fileID: 1778920810}
+  - {fileID: 1942864638}
   - {fileID: 1964403294}
   - {fileID: 542205020}
   - {fileID: 929347752}
@@ -2281,7 +2281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1623676578}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 148148359}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1623676578
 MonoBehaviour:
   m_ObjectHideFlags: 0

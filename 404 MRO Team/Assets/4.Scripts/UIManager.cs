@@ -29,6 +29,10 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Play");
+    }
 
     public void OpenUis(bool openUi)
     {
