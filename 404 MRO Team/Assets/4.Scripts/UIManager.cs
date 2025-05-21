@@ -29,6 +29,24 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Title");
     }
+    public void Stage1()
+    {
+        SceneManager.LoadScene("Stage_1");
+        SceneManager.LoadScene("Play", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Play_GUI", LoadSceneMode.Additive);
+    }
+    public void Stage2()
+    {
+        SceneManager.LoadScene("Stage_2");
+        SceneManager.LoadScene("Play", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Play_GUI", LoadSceneMode.Additive);
+    }
+    public void Stage3()
+    {
+        SceneManager.LoadScene("Stage_3");
+        SceneManager.LoadScene("Play", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Play_GUI", LoadSceneMode.Additive);
+    }
 
     public void OpenUis(bool openUi)
     {

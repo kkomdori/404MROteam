@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     float gravity = -20f;
     float yVelocity = 0;
+    public float interactDistance = 3f;
+
 
     private void Start()
     {
@@ -60,6 +62,23 @@ public class PlayerController : MonoBehaviour
         }
 
         KeyboardInput();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
+            {
+                if (hit.collider.CompareTag("Hideable"))
+                {
+                    Debug.Log("hit");
+                    LockerDoor locker = hit.collider.GetComponentInParent<LockerDoor>();
+                    if (locker != null)
+                    {
+                        locker.ToggleDoor();
+                    }
+                }
+            }
+        }
+
     }
 
 
