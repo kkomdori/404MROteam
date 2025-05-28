@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b7b9112f4651c5341af4f4f45a166e03, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b7b9112f4651c5341af4f4f45a166e03, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -653,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1001939953861660, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
       propertyPath: m_TagString
-      value: Object
+      value: Hideable
       objectReference: {fileID: 0}
     - target: {fileID: 1001939953861660, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -662,6 +666,14 @@ PrefabInstance:
     - target: {fileID: 1215045575723198, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705812685412718, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+      propertyPath: m_Name
+      value: chestTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705812685412718, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+      propertyPath: m_TagString
+      value: Hideable
       objectReference: {fileID: 0}
     - target: {fileID: 1705812685412718, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -734,8 +746,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1001939953861660, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1754631748}
+    - targetCorrespondingSourceObject: {fileID: 1001939953861660, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1754631749}
   m_SourcePrefab: {fileID: 100100000, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+--- !u!1 &1754631743 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1001939953861660, guid: 07cd5567b765cd74281acb137f829fcd, type: 3}
+  m_PrefabInstance: {fileID: 1754631742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1754631748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754631743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0511b63af2813c428e2b0098b0bed4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1754631749
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754631743}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1772325475
 PrefabInstance:
   m_ObjectHideFlags: 0

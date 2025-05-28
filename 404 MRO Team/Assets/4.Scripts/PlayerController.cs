@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     public float jumpPower; 
     public bool isJumping;  // false
     private Scrollbar scrollbar;
-        
+    
+                
 
     float gravity = -20f;
     float yVelocity = 0;
@@ -71,11 +72,16 @@ public class PlayerController : MonoBehaviour
                 {
                     Debug.Log("hit");
                     LockerDoor locker = hit.collider.GetComponentInParent<LockerDoor>();
+                    OpenBox weaponBox = hit.collider.GetComponentInParent<OpenBox>();
                     if (locker != null)
                     {
                         locker.ToggleDoor();
                     }
-                }
+                    else if (weaponBox != null)
+                    {
+                        weaponBox.BoxOpen();
+                    }
+                }                
             }
         }
 
