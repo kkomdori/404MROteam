@@ -1087,7 +1087,7 @@ MonoBehaviour:
   viewDistance: 10
   viewObstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!195 &5183198587143622721
 NavMeshAgent:
   m_ObjectHideFlags: 0
